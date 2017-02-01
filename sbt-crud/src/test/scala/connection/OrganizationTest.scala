@@ -7,6 +7,7 @@ import org.scalatest.FunSuite
   */
 class OrganizationTest extends FunSuite {
 
+  test("")
 
 
 }

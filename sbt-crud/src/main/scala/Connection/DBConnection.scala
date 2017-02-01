@@ -5,6 +5,7 @@ import java.sql.{Connection, DriverManager}
 /**
   * Created by ghost on 1/2/17.
   */
+
 object DBConnection {
 
   //connect to the database named "test"

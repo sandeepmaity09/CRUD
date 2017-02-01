@@ -5,11 +5,18 @@ package Connection
   */
 class methodsForDepartment {
 
-  def addProject(proj:Project): Unit ={
+  def addDepartment(dept:Department): Unit ={
     val statement = DBConnection.connection.createStatement
-    statement.executeUpdate(s"INSERT INTO Project VALUES ('${proj.ID}','${proj.DEPT_ID}','${proj.NAME}','${proj.CLIENT_ID}')")
+    statement.executeUpdate(s"INSERT INTO Department VALUES ('${dept.ID}','${dept.NAME}')")
   }
 
-  
+  def removeDepartment(dept:Department): Unit ={
+    val statement = DBConnection.connection.createStatement
+    statement.executeUpdate(s"DELETE FROM Department WHERE id = '${dept.ID}'")
+  }
 
+  def updateDepartment(dept:Department): Unit = {
+    val statement = DBConnection.connection.createStatement
+    statement.executeUpdate(s"UPDATE Department SET NAME = '${dept.NAME}' WHERE ID = '${dept.ID}'")
+  }
 }
